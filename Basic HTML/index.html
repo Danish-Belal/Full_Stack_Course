@@ -3,36 +3,60 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fve tips for front-end web development</title>
+
+	<!-- <link rel="stylesheet" type="text/css" href="../Style/style.css"> this will not apply -->
+	 <!-- <style type="text/css">
+		p{
+			font-size: 20px;
+			color: deepskyblue;
+		}
+
+	    h3{
+			font-size: 30px;
+			color: red;
+		}
+	</style> internal CSS -->
+
+	<!-- To use external css link that file here -->
+
+	<link rel="stylesheet" type="text/css" href="../Style/style.css">
+
+	<!--if there are many intenal and external css then the last one will be applied in this case external css will be applied.  -->
 </head>
+
 <body>
-	<!-- head
-		logo
-		bar -->
+	
 	<header>
 		<a href="Blog.html" target="_blanck">Category</a>
 		<p>
 			<a href="#Comment_section"> Goto comment section</a>
 		</p>	
-	</header>	
-	<nav>
+	</header>
+
+	<nav id="navi">
 	    <div>	
 		    <a href="https://www.codingninjas.in">
 			  <img src="Images/LOGO-05.PNG"  height="10%"width="10%"  alt="LOGO Images">
 		    </a>
+
 		</div>	
 		<div>
-			<h3><a href="https://blog.codingninjas.in" target="_blanck"> Coading Ninja blogs</a></h3>
+			<h3 ><a href="https://blog.codingninjas.in" target="_blanck"> Coading Ninja blogs</a></h3>
 		</div>
+		<h2>This is navi id in nav.</h2>
+		<h3>This is h3 heading in nav. </h3>
     </nav>
 
-    <section>
+    <section class="fontStyle" >
 	    <div>
-			<h1>Five tips for front-end web development</h1>
+			<h1 id="head-blog">Five tips for front-end web development</h1>
 			<img src="Images/Tips.jpg" 
 			height="50%"
 			width="50%" 
 			alt="Five Tips">
-			<p>
+
+			<!-- <p style="color:red;  font-size: 30px;"> Inline CSS-->
+			<p>	
 				Don’t you just love exploring beautiful and neat sites with a clean user interface? While most of us would reply with an assertive ‘YES,’ little, do we know the kind of effort and skill that goes into making a website attractive and user-friendly. The secret to creating an impressive site is to master the art of front-end development, and no, it is not as easy as it seems!
 				
 			</p>
@@ -71,7 +95,7 @@
 		    	 	<p>
 		    	 		A front-end developer has to keep himself/herself updated continuously with the latest news and innovations in the field. You need to take a proactive stand and learn new things about front-end development from informative blogs and videos.
 		    	 		<br>
-		    	 		<ul type="square">
+		    	 		<ul type="square" class="fontStyle">
 		    	 			<li>CSS Weekly</li>
 		    	 			<li>HTML5 Weekly</li>
 		    	 			<li>JavaScript Weekly</li>

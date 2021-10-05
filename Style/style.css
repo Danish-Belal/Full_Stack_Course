@@ -1,0 +1,28 @@
+/*This css file is used in Basic HTML index.html file.*/
+
+p{
+	font-size: 20px;
+	color: red;
+	font-style: italic;
+
+}
+h1{
+	color: darkgoldenrod;
+}
+
+.fontStyle{
+	font-style: italic;
+	color: blue;
+}
+
+#head-blog:hover{
+	color: orange;
+}
+
+#navi h2{		/* nasting of element to apply common css */
+	color: red;
+}
+
+p , h1{
+	color: deepskyblue;
+}
