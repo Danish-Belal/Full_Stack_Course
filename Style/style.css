@@ -13,6 +13,7 @@ h1{
 .fontStyle{
 	font-style: italic;
 	color: blue;
+
 }
 
 #head-blog:hover{
@@ -25,4 +26,46 @@ h1{
 
 p , h1{
 	color: deepskyblue;
+}
+
+.widget{
+	border-top: 4px solid black;
+}
+
+.widget input{
+	display: block;
+	background-color: #F7F7f7;
+	margin-bottom: 15px;
+	padding: 4px;
+	color: black;
+	font-size: 1.2rem;
+
+}
+
+button[type= "submit"]{
+	font-size: 1.2rem;
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+ button[type = "submit"] :hover{
+ 	background-color: red;
+ }
+
+section{
+   width: 70%;
+   display: inline-block;
+}
+
+.widget-list{
+	font-size: 1.5rem;
+}
+
+aside{
+	display: inline-block;
+	width: 21%;
+	vertical-align: top;
+	margin-left: 4rem;
+	margin-top: 10rem;
+
 }
