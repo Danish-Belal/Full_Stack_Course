@@ -44,7 +44,7 @@ p , h1{
 
 button[type= "submit"]{
 	font-size: 1.2rem;
-	background-color: black;
+	background-color: orange;
 	color: white;
 	padding: 10px;
 }
@@ -52,9 +52,21 @@ button[type= "submit"]{
  	background-color: red;
  }
 
+.foot{
+	display: inline-block;
+	width: 10%;
+	vertical-align: bottom;
+	margin-top: 10px;
+	position: static;
+
+
+}
 section{
-   width: 70%;
+   width: 60%;
    display: inline-block;
+   vertical-align: bottom;
+
+
 }
 
 .widget-list{
@@ -63,9 +75,20 @@ section{
 
 aside{
 	display: inline-block;
-	width: 21%;
+	width: 10%;
 	vertical-align: top;
 	margin-left: 4rem;
 	margin-top: 10rem;
+
+}
+
+#btotop{
+	display: block;
+	/*border: 2px solid black;*/
+	margin: 2px;
+	text-align: center;
+	text-decoration: none;
+	font-style: italic;
+	text-transform: uppercase;
 
 }
