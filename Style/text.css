@@ -6,5 +6,7 @@
     line-height: 40px;   /* Gap between two gaps. */
     text-transform: uppercase;
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-color:pink;
+    text-underline-position: left;
+    text-decoration: none;
 } 
