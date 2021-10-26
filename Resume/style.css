@@ -67,18 +67,26 @@ body{
 .Social-icons li a img:hover{
 	box-shadow: 0px 0px 6px 4px gray;
 
+
 }
 
-/*.Social-icons{
-	margin-left: auto;
-	margin-right: auto;
-}*/
+.Social-icons {
+	align-items: center;
+}
 
 #Socails li{
 	display: inline;
 
-}
 
+}
+section{
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
 #home{
 	height: auto;
 	width: 100%;
@@ -103,36 +111,64 @@ body{
 	text-align: center;
     font-size: 20px;
 }
-#experiance{
-	margin: 20px;
-	font-size: 20px;
-	text-align: center;
 
-}
-#experiance a{
-	text-decoration: none;
-}
-
-#education{
-	font-size: 20px;
-	margin: 20px;
-	text-align: center;
+/*Time line Section*/
+.timeline{
+	position: relative;
+	width: 75%;
 	border: 2px solid black;
-	border-radius: 5%;
-	background-color: rgb(240, 255, 255);
 
 }
-#education a{
-	text-decoration: none;
-}
-/*#education{
+
+.timeline-box{
+	position: relative;
+	margin: 5px;
+	width: 40%;
+	left: 5%;
+	min-height: 150px;
 	border: 2px solid black;
-	border-radius: 10%;
-}*/
-#experiance{
-	border-radius: 5%;
-	border: 2px solid; black;
-	background-color: rgb(240, 255, 255);
+}
+.timeline-box:nth-child(2n){
+	left: 53%;
+}
+
+.timeline-box:nth-child(2n+1)::after{
+	content: '';
+	position: absolute;
+	top: 35%;
+	right: -13%;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: red;
+	z-index: 1;
+}
+
+.timeline-box:nth-child(2n)::after{
+	content: '';
+	position: absolute;
+	top: 35%;
+	left: -9%;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: red;
+	z-index: 1;
+}
+
+.timeline-divider{
+	position: absolute;
+	height: 75%;
+	width: 0;
+	border: 3px dashed lightblue;
+	top: 10%;
+	left: 50%;
+
+}
+.timeline-travler{
+	position: sticky;
+	top: 25%;
+	transform: rotate(90deg);
 }
 
 
