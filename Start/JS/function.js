@@ -65,69 +65,79 @@
 
 
 
-// Multi Nesting Functions.
-function A(x) {
-  function B(y) {
-    function C(z) {
-      console.log(x + y + z);
-    }
-    C(3);
+// // Multi Nesting Functions.
+// function A(x) {
+//   function B(y) {
+//     function C(z) {
+//       console.log(x + y + z);
+//     }
+//     C(3);
+//   }
+//   B(2);
+// }
+// val = A(5); // logs 6 (1 + 2 + 3)
+
+
+// // Name Conflict.
+// function outside() {
+//   var x = 5;
+//   function inside(x) {
+//     return x * 2;
+//   }
+//   return inside;
+// }
+
+// console.log(outside()(10)); // returns 20 instead of 10
+
+
+// // closore . function inside function.
+// var createPet = function (name) {
+//   var sex;
+
+//   return {
+//     setName: function (newName) {
+//       name = newName;
+//     },
+
+//     getName: function () {
+//       return name;
+//     },
+
+//     getSex: function () {
+//       return sex;
+//     },
+
+//     setSex: function (newSex) {
+//       if (typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
+//         newSex.toLowerCase() === 'female')) {
+//         sex = newSex;
+//       }
+//     }
+//   }
+// }
+
+// var pet = createPet('Vivie');
+// pet.getName();                  // Vivie
+
+// pet.setName('Oliver');
+// pet.setSex('male');
+// console.log(pet.getSex());                   // male
+// pet.getName();                  // Oliver
+
+
+
+
+// // Dates and Objects
+// const Xmas95 = new Date('December 25, 1995');
+// console.log(Xmas95);
+
+
+function outside(){
+  console.log("Outer");
+  function inside(){
+    console.log("Inside");
   }
-  B(2);
-}
-val = A(5); // logs 6 (1 + 2 + 3)
-
-
-// Name Conflict.
-function outside() {
-  var x = 5;
-  function inside(x) {
-    return x * 2;
-  }
-  return inside;
+  inside();
 }
 
-console.log(outside()(10)); // returns 20 instead of 10
-
-
-// closore . function inside function.
-var createPet = function (name) {
-  var sex;
-
-  return {
-    setName: function (newName) {
-      name = newName;
-    },
-
-    getName: function () {
-      return name;
-    },
-
-    getSex: function () {
-      return sex;
-    },
-
-    setSex: function (newSex) {
-      if (typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
-        newSex.toLowerCase() === 'female')) {
-        sex = newSex;
-      }
-    }
-  }
-}
-
-var pet = createPet('Vivie');
-pet.getName();                  // Vivie
-
-pet.setName('Oliver');
-pet.setSex('male');
-console.log(pet.getSex());                   // male
-pet.getName();                  // Oliver
-
-
-
-
-// Dates and Objects
-const Xmas95 = new Date('December 25, 1995');
-console.log(Xmas95);
-
+outside();
