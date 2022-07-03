@@ -35,7 +35,7 @@
 //      }
 //    //  console.log(innerVar);  // can not access inner function variable.
 //      return square(a) + square(b);
-     
+
 //    }
 //    a = addSquares(2, 3); // returns 13
 //    b = addSquares(3, 4); // returns 25
@@ -75,11 +75,11 @@ function A(x) {
   }
   B(2);
 }
- val = A(5); // logs 6 (1 + 2 + 3)
+val = A(5); // logs 6 (1 + 2 + 3)
 
 
- // Name Conflict.
- function outside() {
+// Name Conflict.
+function outside() {
   var x = 5;
   function inside(x) {
     return x * 2;
@@ -91,24 +91,24 @@ console.log(outside()(10)); // returns 20 instead of 10
 
 
 // closore . function inside function.
-var createPet = function(name) {
+var createPet = function (name) {
   var sex;
 
   return {
-    setName: function(newName) {
+    setName: function (newName) {
       name = newName;
     },
 
-    getName: function() {
+    getName: function () {
       return name;
     },
 
-    getSex: function() {
+    getSex: function () {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
+    setSex: function (newSex) {
+      if (typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
         newSex.toLowerCase() === 'female')) {
         sex = newSex;
       }
@@ -125,8 +125,9 @@ console.log(pet.getSex());                   // male
 pet.getName();                  // Oliver
 
 
-setTimeout(function())
 
 
-
+// Dates and Objects
+const Xmas95 = new Date('December 25, 1995');
+console.log(Xmas95);
 
