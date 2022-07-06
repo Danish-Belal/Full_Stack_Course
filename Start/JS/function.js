@@ -132,12 +132,28 @@
 // console.log(Xmas95);
 
 
-function outside(){
-  console.log("Outer");
-  function inside(){
-    console.log("Inside");
-  }
-  inside();
-}
+// function outside(){
+//   console.log("Outer");
+//   function inside(){
+//     console.log("Inside");
+//   }
+//   inside();
+// }
 
-outside();
+// outside();
+
+
+f(10);
+function f(n){
+  console.log(n);
+}
+f(2);
+
+
+
+var v = function fact(n){
+  console.log(n)
+}
+v(4);
+
+
