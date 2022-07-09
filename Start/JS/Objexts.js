@@ -33,3 +33,8 @@ console.log(student==student2);
 var student3 = new Object();
 console.log(student3);
 console.log(student===student3);
+
+var keys = Object.keys(student2);
+console.log(keys);
+var keys2 = Object.getOwnPropertyNames(student2);
+console.log(keys2);
