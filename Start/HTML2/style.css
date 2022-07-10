@@ -1,0 +1,47 @@
+*{
+     /* color: royalblue; */
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+li li{
+     height: 0;
+     visibility: hidden;
+}
+
+li:hover>*>li{
+     height: auto;
+     visibility: visible;
+     color: red;
+}
+
+.outer  .inner{
+     background-color: aqua;
+}
+
+div ~ p{
+     color: red;
+}
+
+div+p{
+     color: forestgreen;
+}
+
+
+ol > li[class="red"]{
+     color: red;
+}
+
+
+h1{
+     color: blue;
+}
+
+h1+span{
+     font-size: 70px;
+}
+h2{
+     background-color: blue;
+     color: white;
+}
+
