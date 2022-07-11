@@ -1,0 +1,49 @@
+div{
+     height: 100px;
+     width: 100px;
+     margin: 30px;
+     background-color: midnightblue;
+}
+
+#two{
+     transform: translateX(30px) translateY(-20px);
+}
+
+#four:hover{
+     background-image: linear-gradient(to left ,red,blue,green);
+     transform: rotate(350deg);
+     animation-delay: 10ms;
+    
+}
+
+#five{
+     transform: skew(30deg);
+}
+
+#six:hover{
+     transform: scale(1.5);
+}
+
+.click{
+     height: 100px;
+     width: 300px;
+     background-color: royalblue;
+     color: white;
+     text-align: center; 
+     transition-property: initial;
+     
+}
+.click{
+     box-shadow: 10px 10px 5px black;
+    
+}
+.click:hover{
+    transform: translateX(-3px) translateY(3px) ;
+    transition-duration: 0.30s;
+    background-image: linear-gradient(red,blue,green);
+   
+}
+
+.click:focus{
+     box-shadow: none;
+}
