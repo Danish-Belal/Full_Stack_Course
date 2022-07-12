@@ -57,7 +57,7 @@ var time = 10;
 function countDown(){
      console.log(time);
      time--;
-     if(time == 0){
+     if(time == -1){
           clearInterval(id2);
      }
 }
