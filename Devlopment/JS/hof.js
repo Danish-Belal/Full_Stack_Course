@@ -196,3 +196,6 @@ function getLessThan5(arr,obj){
 }
 var res = worldCapitals.reduce( getLessThan5, [] );
 console.log(res);
+
+
+let arr = [1, 4, 2, 3, 2, 4, 1, 5, 6, 1, 1];
