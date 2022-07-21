@@ -1,0 +1,40 @@
+*{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+h1{
+     margin-left: 3rem;
+     font-weight: 100;
+ 
+}
+li{
+     list-style: none;
+}
+
+img[src="./Images/lap.jpeg"]{
+     width: 100%;
+     margin-left: 2rem;
+     margin-right: 2rem;
+
+}
+
+.skills{
+     display: flex;
+     justify-content: space-around;
+}
+.skills>div{
+     margin-left: 2vw;
+     margin-top: 1rem;
+     
+}
+.footer{
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+     background-color: black;
+     color: white;
+     text-align: center;
+}
+
+.footer>p{
+     font-size: 2rem;
+}
