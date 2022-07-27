@@ -48,11 +48,11 @@ console.log(areaofSquareArr);
 var areaofSquareArr = arr.map(area);
 console.log(areaofSquareArr);
 
-// calculate (arr , logic); //-> convert this into map.
-// arr.map(area).
+calculate (arr , logic); //-> convert this into map.
+arr.map(area).
 
-// this is what we required.
-// arr.calculate.
+//this is what we required.
+arr.calculate.
 
 Array.prototype.calculate = function(logic){
      let res = [];
@@ -167,24 +167,24 @@ for(cap in worldCapitals){
 
 
 // 03.
-// var res = [];
-// worldCapitals.forEach(element => {
-//      if(element.population < "5cr"){
-//           res.push(element.country);
-//      }
-// });
-// console.log(res);
+var res = [];
+worldCapitals.forEach(element => {
+     if(element.population < "5cr"){
+          res.push(element.country);
+     }
+});
+console.log(res);
 
-// function  getPopulationLessThan5cr(obj){
-//      if(obj.population < "5cr"){
-//           return true;
-//      }
-// }
-// function getCountry(obj){
-//      return obj.country;
-// }
-// var res= worldCapitals.filter(getPopulationLessThan5cr).map(getCountry);
-// console.log(res);
+function  getPopulationLessThan5cr(obj){
+     if(obj.population < "5cr"){
+          return true;
+     }
+}
+function getCountry(obj){
+     return obj.country;
+}
+var res= worldCapitals.filter(getPopulationLessThan5cr).map(getCountry);
+console.log(res);
 
 // using reduce.
 
