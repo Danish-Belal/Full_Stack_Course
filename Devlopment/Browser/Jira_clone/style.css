@@ -70,6 +70,7 @@
      display: flex; 
     top: calc((100vh-50vh)/2);
     left: calc((100vh-45vh)/2);
+    margin: 50px;
     
 }
 
