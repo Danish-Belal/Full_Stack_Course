@@ -1,0 +1,65 @@
+div{
+     height: 70px;
+     width: 70px;
+     margin-left: 5px;
+     background-color: blue;
+     color: white;
+     font-size: 30pt;
+     margin: 15px;
+     transition: 2s;
+
+}
+
+div:nth-child(1){
+     transform: rotate(45deg);
+}
+div:nth-child(2){
+     transform: rotateX(45deg);
+}
+
+div:nth-child(3){
+     transform: scaleX(0.5);
+}
+div:nth-child(4){
+     transform: skew(10deg);
+}
+
+div:nth-child(5):hover{
+     transform: rotateX(360deg);
+    
+}
+
+div:nth-child(6):hover{
+     transform: translateX(100px);
+    
+}
+
+div:nth-child(7):hover{
+     margin-top: 130px;
+}
+div:nth-child(8):hover{
+     margin-bottom: 130px;
+}
+
+div:nth-child(9){
+     animation-name: wheel;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+}
+
+@keyframes wheel {
+     0%{
+     
+     }
+     33%{
+          transform: scale(2);
+     }
+     50%{
+          transform: translateX(100px) rotateZ(360deg);
+         
+     }
+     75%{
+          transform: scale(0.5) rotate(180deg);
+     }
+     100%{}
+}
