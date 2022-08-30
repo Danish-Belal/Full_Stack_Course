@@ -27,3 +27,48 @@ var obj = {
      price
 }
 console.log(obj);
+
+var captain ={
+     firstName :"Steve",
+     lastName : "Rogers",
+     friends : ["Tony","Bruce","Peter"],
+     age : 122,
+     address : {
+          city : "New York",
+          state : "Manhattan",
+          country : "USA"
+     },
+     sayHi : function(){
+          console.log(`Hello my name is ${captain.firstName}`);
+     }
+
+};
+
+for(var key in captain){
+     console.log(key);
+     console.log(captain[key]);
+}
+
+var fun = captain['sayHi'];
+fun();
+
+
+// Clone an object
+let clone  = {};
+// for(let key in captain){
+//      clone[key] = captain[key];
+// }
+// console.log(clone); // it will print in same order as captain object.
+
+// object assign
+Object.assign(clone,captain);
+console.log(clone);
+
+// let clone = {...captain};
+// console.log(clone);
+
+let v = 01;
+function f(){
+     return ++v;
+}
+console.log(f());
