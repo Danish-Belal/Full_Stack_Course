@@ -22,10 +22,10 @@ console.log(a);  // will print 10.
 
 // Above code is same as below code.
 // All the variables and functions are hoisted to the top of the scope. this all happend due to execution context.
-// var a;
-// function fun(){
-//      console.log("I am a function");
-// }   
-// console.log(a); 
-// a = 10;
-// console.log(a);  
+var a;
+function fun(){
+     console.log("I am a function");
+}   
+console.log(a); 
+a = 10;
+console.log(a);  
