@@ -55,21 +55,23 @@ fun();
 
 // Clone an object
 let clone  = {};
-// for(let key in captain){
-//      clone[key] = captain[key];
-// }
-// console.log(clone); // it will print in same order as captain object.
+for(let key in captain){
+     clone[key] = captain[key];
+}
+console.log(clone); // it will print in same order as captain object.
 
-// object assign
+// object assign , but for nested object it will only copy the reference.
 Object.assign(clone,captain);
 console.log(clone);
 
 // let clone = {...captain};
 // console.log(clone);
 
-let v = 01;
-function f(){
-     return ++v;
-}
-console.log(f());
+// let v = 01;
+// function f(){
+//      return ++v;
+// }
+// console.log(f());
+
+
 
