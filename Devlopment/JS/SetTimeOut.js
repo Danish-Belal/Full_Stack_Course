@@ -31,15 +31,20 @@
 
 // if you want to do it using var then wrap it in a function and call it.
 
+// function print(){ 
+//      for(var i =1 ; i<=5 ; i++){
+//           function wrapper(b) { 
+//                setTimeout(function(){
+//                     console.log(b);  
+//                } , b*1000) ;            
+//            }
+//            wrapper(i)
+//     }
+// }
+
 function print(){
-   
-     for(var i =1 ; i<=5 ; i++){
-          function wrapper(b) { 
-               setTimeout(function(){
-                    console.log(b);  
-               } , b*1000) ;            
-           }
-           wrapper(i)
-    }
+     for(let i =1 ; i<= 5 ; i++){
+          setTimeout( ()=> {console.log(i);} , 1000);
+     }
 }
 print();
