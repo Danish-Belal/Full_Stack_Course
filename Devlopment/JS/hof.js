@@ -27,7 +27,7 @@ console.log(calculate(arr , perimeter));
 console.log(calculate(arr , diagnole));
 
 
-// map.
+// map.  Map is a function which takes a function as an argument and returns a function. its known as higher order function.
 // Syntax -> arr.map(function(ele)){
 //      return {logic}
 // })
