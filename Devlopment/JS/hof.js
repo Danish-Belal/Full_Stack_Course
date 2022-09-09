@@ -76,3 +76,13 @@ console.log(newarr);
 
 
 // polyfills ->  adding a function to a class which is not present in your browser .
+
+
+// Filters -> filter is a function which takes a function as an argument and returns a function. its known as higher order function.
+let ar = [2,5,7,12];
+
+function greaterThanFour(num){
+     return num>4;
+}
+let gT4 = ar .filter(greaterThanFour);
+console.log(gT4);
