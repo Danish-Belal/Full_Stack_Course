@@ -86,3 +86,15 @@ function greaterThanFour(num){
 }
 let gT4 = ar .filter(greaterThanFour);
 console.log(gT4);
+
+
+// Reduce -> reduce is a function which takes a function as an argument and returns a function. its known as higher order function.
+function sumOfArray(acc , curr){
+     console.log("before " , acc , curr);
+     acc += curr;
+     console.log("After " , acc , curr);
+     return acc;
+    
+}
+ var sum = ar.reduce(sumOfArray);
+ console.log(sum);
