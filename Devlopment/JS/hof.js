@@ -98,3 +98,75 @@ function sumOfArray(acc , curr){
 }
  var sum = ar.reduce(sumOfArray);
  console.log(sum);
+
+
+ // FUnction to get largest number from an array.
+   function largestElement(acc , curr){
+     if(acc > curr) return acc;
+     return curr;
+  }
+
+
+ let larg = ar.reduce(largestElement , -Infinity); // -Infinity is the initial value of acc. so that curr starts form 0th index.
+     console.log(larg);
+
+     
+     const worldCapitals = [
+          {country: "India",capital: "Delhi",population: "2cr",},
+          {country: "America",capital: "Washington DC",population: "6cr",},
+          {country: "France",capital: "Paris",population: "2cr",},
+          {country: "England",capital: "London",population: "4cr",},
+          {country: "Germany",capital: "Berlin",population: "2cr",},
+     ];     
+
+    
+
+     // 1) Get all the countries and capital from worldCapitals in an array.
+     let contCapi = worldCapitals.map((obj) => {
+          return obj.country + " " + obj.capital;
+     });
+     console.log(contCapi);
+
+     // 2) return the number of country.
+     function getPopulation(obj , curr){
+         if(obj[curr.population]) obj[curr.population]++;
+         else obj[curr.population] = 1;
+         return obj;
+     }
+     let getCountryPop = worldCapitals.reduce(getPopulation , {});
+     console.log(getCountryPop);
+    
+     // 3) return the countries which have population greater than 5cr.
+     
+//      let C = worldCapitals.filter((obj) => {
+//           return obj.population < "5r";
+//      });
+
+//     let ans2=  C.map((obj)=>{
+//           return obj.country;
+//      });
+//      console.log(ans2);
+
+     // Antoher way.
+     // function getPopulationlessThan5(obj){
+     //      return obj.population < "5cr";
+     // }
+
+
+     // function getCountry(obj){
+     //      return obj.country;
+     // }
+
+
+     // let res = worldCapitals.filter(getPopulationlessThan5).map(getCountry);
+     // console.log(res);
+
+     // using reduce.
+     function lessThan5(acc , curr){
+          if(curr.population <= "5cr"){
+               acc.push(curr.country);
+          }
+          return acc;
+     }
+     let res = worldCapitals.reduce(lessThan5 , []);
+     console.log(res); 
