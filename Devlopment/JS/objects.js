@@ -74,4 +74,27 @@ console.log(clone);
 // console.log(f());
 
 
+// q1 -> count the frequency of each element in an array.
+  let arr = [1, 4, 2, 3, 2, 4, 1, 5, 6, 1, 1];
+
+//  function countFreq(ele){
+//      let obj = {};
+//      for(let i = 0 ; i < ele.length ; i++){
+//          if(obj[ele[i]]) obj[ele[i]]++;
+//          else obj[ele[i]] = 1;
+//      }
+//      console.log(obj);
+//  }
+
+//  let ans = countFreq(arr);
+//  console.log(ans);
+
+ function countfre(acc , curr){
+     if(acc[curr]) acc[curr]++;
+     else acc[curr] = 1;
+     return acc;
+ }
+
+ let ans2 = arr.reduce(countfre , {});
+ console.log(ans2);
 
