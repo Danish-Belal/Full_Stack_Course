@@ -52,3 +52,25 @@ var obj = {
 }
 
 obj.square(); // will print 1 cause after 2 sec square call will finish and this will point to window.
+// its same as class.
+function Name(fname , lname){
+     console.log(this);  // this will print empty {}
+     this.fname = fname;
+     this.lname = lname;
+     console.log(this); // this will give key value pair.
+}
+
+var obj = new Name("Da" , "Be");  // constructor.
+console.log(obj);
+
+/*
+js creates a new object {}.
+js passes the object reference's to the function.
+this -> {}
+
+{
+     fname : "Da",
+     lname ; "Be"
+}
+
+*/
