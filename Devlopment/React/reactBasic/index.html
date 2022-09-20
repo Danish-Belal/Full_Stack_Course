@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+     <title>React Basic</title>
+</head>
+<body>
+    <!-- <h1> In this we will learn Basic React .</h1> -->
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+     // JS
+     //  let ele = document.createElement("h1");
+     //  ele.innerText = "HII";
+     //  let root = document.getElementById("root");
+     //  console.log(ele);
+     //  root.appendChild(ele);
+
+
+     // React.
+     // let h2 = React.createElement("h2" , {
+     //      children:["Yolo"]
+     // })
+
+     // let ele = React.createElement("div" , {
+     //      children : ["Danish" , h2]
+     // })
+
+     // console.log(ele);
+     // const root = ReactDOM.createRoot(document.getElementById("root"));
+     // root.render(ele);
+
+     // JSX.
+     function MyHello(){
+          return(  // JSX start.
+               <h1>Hi , Danish Belal.</h1>
+          )
+     }
+     function MyHello2(){
+          return(  // JSX start.
+               <h1>Hello , Danish .</h1>
+          )
+     }
+
+     // If we want both component so we will make it in parent class.
+     function Parent(){
+          return (
+          //     <div>  
+          //           <MyHello/>
+          //           <MyHello2/>
+          //      </div>
+          
+          //this comes in one div
+               <React.Fragment>  
+                    <MyHello/>
+                    <MyHello2/>
+                    <WelcomeMsg name="Zishan" place="Kolkatta"/>
+               </React.Fragment>
+          )
+     } 
+     
+     function WelcomeMsg( {name , place}){  // we can add default value name = "Harry" , this will used when no argument will be passed.
+          return(
+               // <h1>Hello , {props.name} form {props.place}.</h1>  // can call props as argrumet
+               <h1>Hello , {name} form {place}.</h1>  // can dirctly use 
+          )
+     }
+     const root = ReactDOM.createRoot(document.getElementById('root'));
+     root.render(<MyHello/>);
+     root.render(<MyHello/>);
+     root.render(<MyHello/>);
+     root.render(<MyHello/>);  // only last on will print.
+     root.render(<MyHello2/>)
+
+     root.render(<Parent/>);  // parent can render more than one component.
+
+    </script>   
+    </body>
+</html>
