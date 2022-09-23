@@ -29,7 +29,6 @@ export default class Todo extends Component {
       <div>
         <input type="text" placeholder='Enter Your Task' onChange={this.handleChange} />
         <button onClick={this.handleTask}> Add</button>
-
         {
           this.state.tasks.map(task => {
             return (
