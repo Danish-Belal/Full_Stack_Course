@@ -1,0 +1,7 @@
+.list{
+     display : flex;
+     color: red;
+}
+*{
+     background-color: rgb(220, 229, 229);
+}

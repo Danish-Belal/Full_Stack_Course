@@ -4,14 +4,18 @@ export default class Todo extends Component {
   constructor() {
     super();
     this.state = {
-      tasks: ["Revise JS", "Revise DSA", "Operating System"],
+      tasks: [
+        { id: 1, task: "Revise DSA" },
+        { id: 2, task: "Revise JS" },
+
+      ],
       currentTask: "",
     };
   }
 
   handleTask = () => {
     this.setState({
-      tasks: [...this.state.tasks, this.state.currentTask]
+      tasks: [...this.state.tasks, { id: this.state.tasks.length + 1, task: this.state.currentTask }]
     })
   }
 
@@ -21,8 +25,16 @@ export default class Todo extends Component {
       currentTask: e.target.value
     })
 
-
   }
+
+
+  handleDelete = (id) => {
+    let narr = this.state.tasks.filter(taskObj => taskObj.id !== id)
+    this.setState({
+      tasks: [...narr]
+    })
+  }
+
   render() {
     return (
       // <div>Todo</div>
@@ -30,11 +42,11 @@ export default class Todo extends Component {
         <input type="text" placeholder='Enter Your Task' onChange={this.handleChange} />
         <button onClick={this.handleTask}> Add</button>
         {
-          this.state.tasks.map(task => {
+          this.state.tasks.map((taskObj , idx) => {
             return (
-              <li>
-                <p>{task}</p>
-                <button>Delete</button>
+              <li className='list' key={taskObj.id}>
+                <p>{`${idx+1}. ${taskObj.task}`}</p>
+                <button onClick={() => this.handleDelete(taskObj.id)}>Delete</button>
               </li>
             )
           })
