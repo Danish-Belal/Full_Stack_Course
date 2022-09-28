@@ -42,18 +42,16 @@ export default class Todo extends Component {
         <input type="text" placeholder='Enter Your Task' onChange={this.handleChange} />
         <button onClick={this.handleTask}> Add</button>
         {
-          this.state.tasks.map((taskObj , idx) => {
+          this.state.tasks.map((taskObj, idx) => {
             return (
               <li className='list' key={taskObj.id}>
-                <p>{`${idx+1}. ${taskObj.task}`}</p>
+                <p>{`${idx + 1}. ${taskObj.task}`}</p>
                 <button onClick={() => this.handleDelete(taskObj.id)}>Delete</button>
               </li>
             )
           })
-
         }
       </div>
-
     )
   }
 }
