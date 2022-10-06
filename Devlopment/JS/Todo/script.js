@@ -34,3 +34,11 @@ btnRemove.onclick = () => {
      removeTast.remove();
 
 }
+
+let obj = {
+     name : "Danish",
+     age : 21
+}
+
+let toLocal = JSON.stringify(obj);  // stored an object in Local strong in form of obj.
+let toObj = JSON.parse(toLocal);  // get a strign from local storage and convert it into obj.
