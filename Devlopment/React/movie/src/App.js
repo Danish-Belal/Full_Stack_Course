@@ -4,13 +4,14 @@ import Banner from './Components/Banner';
 import List from './Components/List';
 import Faviourate from './Components/Faviourate';
 
+
 function App() {
   return (
     <div>
     <Navbar />
     <Banner />
-    <List />
-    <Faviourate />
+    <List /> 
+    <Faviourate name = "Danish" />
     </div>
   );
 }
