@@ -11,7 +11,7 @@ function App() {
     <Navbar />
     <Banner />
     <List /> 
-    <Faviourate name = "Danish" />
+    <Faviourate name = "Danish"/>
     </div>
   );
 }
