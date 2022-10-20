@@ -7,7 +7,8 @@ export default class List extends Component {
           super();
           this.state = {
                hover: '',
-               movies: []
+               movies: [],
+               currentPage: 1,
           };
      }
 
@@ -42,9 +43,41 @@ export default class List extends Component {
           console.log("CDU is Called");
      }
 
+     async getUpdatedMovies() {
+          console.log("getUpdatedMovies is Called");
+          let data = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=04fdb5506bb7fadb96d28abe051de10a&language=en-US&page=${this.state.currentPage}`)
+          console.log(data.data);
+          this.setState({
+               movies: [...data.data.results],
+          });
+     }
+
      componentWillUnmount() {
           console.log("Component Will UnMount is Called");
      }
+
+
+
+     handlePrevious = () => {
+          if (this.state.currentPage > 1) {
+               this.setState({
+                    currentPage: this.state.currentPage - 1
+               },
+                    this.getUpdatedMovies
+               )
+
+          }
+
+     }
+     handleNext = () => {
+          this.setState({
+               currentPage: this.state.currentPage + 1
+          },
+               this.getUpdatedMovies
+          )
+
+     }
+
 
      render() {
           console.log("Render is Called");
@@ -87,11 +120,15 @@ export default class List extends Component {
                     <>
                          <nav aria-label="Page navigation example" class='pagination'>
                               <ul class="pagination">
-                                   <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                   <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                   <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                   <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                   <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                   <li class="page-item" >
+                                        <a class="page-link" onClick={this.handlePrevious}> Previous</a>
+                                   </li>
+                                   <li class="page-item">
+                                        <a class="page-link">{this.state.currentPage}</a>
+                                   </li>
+                                   <li class="page-item">
+                                        <a class="page-link" onClick={this.handleNext}>Next </a>
+                                   </li>
                               </ul>
                          </nav>
                     </>
