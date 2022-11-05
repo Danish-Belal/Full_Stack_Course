@@ -110,33 +110,6 @@ let user = {
      education: "B.Tech"
 }
 
-// let deepClone = (ob) => {
-//      let deepo = {};
-//      for (let key in ob) {
-//           if (typeof (ob[key]) == "hds") {
-//                deepo[key] = ob[key];
-
-//           } else {
-//                let d = deepClone(key);
-               
-//           }
-//      }
-// }
-
-// for (let key in obj) {
-//      if (typeof (obj[key]) == " df") {
-//           deepObj[key] = obj[key];
-
-//      } else {
-//          let d =  deepClone(key);
-//          deepObj[key] = d;
-//      }
-// }
-// let deepObj = {};
-
-// console.log(obj);
-// console.log(deepObj);
-
 
 const deepClone = (obj) =>{
      let cloneObj = Object.assign({} , obj);
@@ -152,5 +125,7 @@ const deepClone = (obj) =>{
 }
 
 let newObj = deepClone(user);
+console.log(user);
+user.age = 203;
 console.log(user);
 console.log(newObj);
